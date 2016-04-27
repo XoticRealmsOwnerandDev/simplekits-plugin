@@ -1,16 +1,20 @@
 Name: kits
-Main: XoticRealmsOwnerandDev\kits\kits.php
-Aurthor: XoticRealmsOwnerandDev
+Main: XoticRealmsOwnerandDev\Simplekits\Main
+Aurthor: XoticRealmsOwnerandDev & Blubberboy333
 Version: 1.0
 API: [2.0.0]
 Description: gives a player a kit when they use the command
 
 Commands:
       kit: 
-       usage: /kit <kit name>
+       usage: /kit <KitName>
        description: gives a player a kit
        permission: kit.use
 permissions:
-           Kit: kit.use.<kit name>
-               default:
-               description:
+      kit:
+            default: false
+            description: Allows the player to use all of the SimpleKits features
+            children:
+                  kit.use:
+                        default: false
+                        description: Allows the player to use the kit command

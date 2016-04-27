@@ -6,3 +6,11 @@ API: 0.14.0
 Description: gives a player a kit when they run the command
 
 Commands:
+      kit: 
+       usage: /kit <kit name>
+       description: gives a player a kit
+       permission: kit.use
+permissions:
+           Kit:
+               default:
+               description:

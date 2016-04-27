@@ -3,3 +3,18 @@
 # {NAME} for the player's name
 Commands:
 - tell {PLAYER} thank you for using you kit
+
+# The kit below is the default format. You can add and remove kits if you'd like to
+#KitName: Description
+Default: Default kit
+#Items that are in the kit
+  - 299
+  - 300
+  - 297
+  
+OP: Over Powered kit
+  - 310
+  - 311
+  - 312
+  - 313
+  - 276

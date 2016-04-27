@@ -2,7 +2,7 @@ Name: kits
 Main: XoticRealmsOwnerandDev\kits\kits.php
 Aurthor: XoticRealmsOwnerandDev
 Version: 1.0
-API: 0.14.0
+API: [2.0.0]
 Description: gives a player a kit when they run the command
 
 Commands:

@@ -4,6 +4,9 @@
 Commands:
 - tell {PLAYER} thank you for using you kit
 
+# List of kit names
+List: ["Default", "OP"]
+
 # The kit below is the default format. You can add and remove kits if you'd like to
 #KitName: Description
 Default: Default kit

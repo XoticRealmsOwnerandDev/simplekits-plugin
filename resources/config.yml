@@ -11,7 +11,7 @@ List: ["Default", "OP"]
 #KitName: Description
 Default: Default kit
 #Items that are in the kit
-  - 299
+  - 299 [enchantment id] [enchantment level]
   - 300
   - 297
   

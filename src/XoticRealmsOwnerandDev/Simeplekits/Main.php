@@ -34,9 +34,12 @@ class Main extends PluginBase{
 										$this->getLogger()->info(TextFormat::RED.$i." is not an item!!! Please fix this!");
 									}
 								}
-							$sender->sendMessage("You have chosen the kit ".$args[0]);
-							$this->getLogger()->info("[".$sender->getName()." is using the kit called ".$args[0]."]");
-							return true;
+								foreach($this->getConfig()->get("Commands") as $i){
+									$this->getServer()->dispatchCommand(new ConsoleCommandSender(str_replace(array("{PLAYER}", "{NAME}"), $sender, $sender->getName())));
+								}
+								$sender->sendMessage("You have chosen the kit ".$args[0]);
+								$this->getLogger()->info("[".$sender->getName()." is using the kit called ".$args[0]."]");
+								return true;
 							}else{
 								$sender->sendMessage(TextFormat::RED."There is no kit by that name!");
 								return true;

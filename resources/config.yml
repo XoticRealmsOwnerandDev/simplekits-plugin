@@ -12,12 +12,12 @@ List: ["Default", "OP"]
 Default: Default kit
 #Items that are in the kit
   - 299 [enchantment id] [enchantment level]
-  - 300
-  - 297
+  - 300 [enchantment id] [enchantment level]
+  - 297 [enchantment id] [enchantment level]
   
 OP: Over Powered kit
-  - 310
-  - 311
-  - 312
-  - 313
-  - 276
+  - 310 [enchantment id] [enchantment level]
+  - 311 [enchantment id] [enchantment level]
+  - 312 [enchantment id] [enchantment level]
+  - 313 [enchantment id] [enchantment level]
+  - 276 [enchantment id] [enchantment level]

@@ -13,6 +13,9 @@ Commands:
   kitadd:
       usage: /kitadd <player> <kit>
       description: Adds another player to a kit file so they can use that kit
+  kitremove:
+    usage: /kitremove <player> <kit>
+    description: Removes a player from a kit file
 permissions:
   kit:
     default: false

@@ -87,8 +87,59 @@ class Main extends PluginBase{
 					return true;
 				}
 			case "kitadd":
-				
+				if($sender->hasPermission("kit") || $sender->hasPermission("kit.add")){
+					if(isset($args[0])){
+						if(isset($args[1])){
+							$player = $this->getServer()->getPlayer($args[0]);
+							if($player instanceof Player){
+								if(isset($this->getConfig()->get($args[1]))){
+									if(file_exists($this->getDataFolder()."Kits/".$args[1].".yml")){
+										$this->addPlayer($player, $args[1]);
+										$sender->sendMessage("Added ".$player->getName()." to the kit file ".$args[1]);
+										// Left off here...
+										return true;
+									}else{
+										$sender->sendMessage("An error has occored. Please ask an admin about this.");
+										return true;
+									}
+								}else{
+									$sender->sendMessage($args[1]." isn't a kit!");
+									return true;
+								}
+							}else{
+								$sender->sendMessage($args[0]." isn't online!");
+								return true;
+							}
+						}else{
+							$sender->sendMessage(TextFormat::YELLOW."You need to specify a kit!");
+							return true;
+						}
+					}else{
+						$sender->sendMessage(TextFormat::YELLOW."No sub-commands were given!");
+						return false;
+					}
+				}else{
+					$sender->sendMessage(TextFormat::RED."You don't have permission to use that command!");
+					return true;
+				}
 			case "kitremove":
+				if($sender->hasPemission("kit") || $sender->hasPemission("kit.remove")){
+					if(isset($args[0])){
+						if(isset($args[1])){
+							$player = $this->getServer()->getPlayer($args[0]);
+							if($player instanceof Player){
+								if(isset($this->getConfig()->get($args[1]))){
+									if(file_exists($this->getDataFolder()."Kits/".$args[1].".yml")){
+										$this->removePlayer($player, $args[1]);
+										$sender->sendMessage("You have blocked ".$player->getName()." from using the kit ".$args[1]);
+										$this->getLogger()->info("[".$sender->getName()." blocked ".$player->getName()." from  using the kit ".$args[1]);
+										return true;
+									}
+								}
+							}
+						}
+					}
+				}
 		}
 	}
 }

@@ -7,17 +7,8 @@ Commands:
 # List of kit names
 List: ["Default", "OP"]
 
-# The kit below is the default format. You can add and remove kits if you'd like to
-#KitName: Description
-Default: Default kit
+Default:
 #Items that are in the kit
-  - 299 [enchantment id] [enchantment level]
-  - 300 [enchantment id] [enchantment level]
-  - 297 [enchantment id] [enchantment level]
-  
-OP: Over Powered kit
-  - 310 [enchantment id] [enchantment level]
-  - 311 [enchantment id] [enchantment level]
-  - 312 [enchantment id] [enchantment level]
-  - 313 [enchantment id] [enchantment level]
-  - 276 [enchantment id] [enchantment level]
+  Items: [299, 300, 297]
+OP:
+  Items: [310, 311, 312, 313, 276]

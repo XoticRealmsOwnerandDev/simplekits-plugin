@@ -65,12 +65,30 @@ class Main extends PluginBase{
 							if(isset($this->getConfig()->get($args[0]))){
 								if($this->checkPlayer($sender, $args[0]) == true){
 									$sender->sendMessage("You have chosen the kit ".$args[0]);
-									// Left off here...
+									foreach($this->getConfig()->get($args[0]) as $i){
+										$player->getInventory()->addItem(Item::get($i));
+									}
+									$this->getLogger()->info("[".$sender->getName()." chose the kit ".$args[0]"]");
+									return true;
+								}else{
+									$sender->sendMessage("You can't use that kit!");
+									return true;
 								}
+							}else{
+								$sender->sendMessage("There is no kit by that name!");
+								return true;
 							}
 						}
+					}else{
+						return false;
 					}
+				}else{
+					$sender->sendMessage(TextFormat::RED."You don't have permission to use that command!");
+					return true;
 				}
+			case "kitadd":
+				
+			case "kitremove":
 		}
 	}
 }

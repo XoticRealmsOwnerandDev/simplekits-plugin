@@ -6,15 +6,21 @@ API: [2.0.0]
 Description: gives a player a kit when they use the command
 
 Commands:
-      kit: 
-       usage: /kit <KitName | list>
-       description: gives a player a kit
-       permission: kit.use
+  kit: 
+    usage: /kit <KitName | list>
+   description: Gives a player a kit
+   permission: kit.use
+  kitadd:
+      usage: /kitadd <player> <kit>
+      description: Adds another player to a kit file so they can use that kit
 permissions:
-      kit:
-            default: false
-            description: Allows the player to use all of the SimpleKits features
-            children:
-                  kit.use:
-                        default: op
-                        description: Allows the player to use the kit command
+  kit:
+    default: false
+    description: Allows the player to use all of the SimpleKits features
+    children:
+      kit.use:
+        default: op
+        description: Allows the player to use the kit command
+      kit.add:
+        default: op
+        description: Allows the player to add another player to a Kit file

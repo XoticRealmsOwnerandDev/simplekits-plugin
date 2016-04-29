@@ -9,6 +9,12 @@ List: ["Default", "OP"]
 
 Default:
 #Items that are in the kit
-  Items: [299, 300, 297]
+  - 299
+  - 300
+  - 297
 OP:
-  Items: [310, 311, 312, 313, 276]
+  - 310
+  - 311
+  - 312
+  - 313
+  - 276

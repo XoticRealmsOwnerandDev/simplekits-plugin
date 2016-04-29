@@ -27,3 +27,6 @@ permissions:
       kit.add:
         default: op
         description: Allows the player to add another player to a Kit file
+      kit.remove:
+        default: op
+        description: Allows the player to remove another player from a kit file

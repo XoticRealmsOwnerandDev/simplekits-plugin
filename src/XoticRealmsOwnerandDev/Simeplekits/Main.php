@@ -96,7 +96,9 @@ class Main extends PluginBase{
 									if(file_exists($this->getDataFolder()."Kits/".$args[1].".yml")){
 										$this->addPlayer($player, $args[1]);
 										$sender->sendMessage("Added ".$player->getName()." to the kit file ".$args[1]);
-										// Left off here...
+										if($sender instanceof Player){
+											$this->getLogger()->info("[".$sender->getName()." added ".$player->getName()." to the kit file ".$args[1]);
+										}
 										return true;
 									}else{
 										$sender->sendMessage("An error has occored. Please ask an admin about this.");
@@ -132,7 +134,12 @@ class Main extends PluginBase{
 									if(file_exists($this->getDataFolder()."Kits/".$args[1].".yml")){
 										$this->removePlayer($player, $args[1]);
 										$sender->sendMessage("You have blocked ".$player->getName()." from using the kit ".$args[1]);
-										$this->getLogger()->info("[".$sender->getName()." blocked ".$player->getName()." from  using the kit ".$args[1]);
+										if($sender instanceof Player){
+											$this->getLogger()->info("[".$sender->getName()." blocked ".$player->getName()." from  using the kit ".$args[1]);
+										}
+										return true;
+									}else{
+										$sender->sendMessage("There is not kit by the name of ".$args[1]);
 										return true;
 									}
 								}
